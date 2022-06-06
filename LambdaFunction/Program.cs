@@ -24,12 +24,17 @@ namespace LambdaFunction
             }
 
             //uc3
+            Console.WriteLine("*******************************");
             Console.WriteLine("Retrive all record the list for age 13 to 18");
             foreach (Person p in PeopleList.FindAll(e => (e.age >=13 && e.age <=18)).ToList())
             {
                 Console.WriteLine("Name:"+p.name);
             }
-
+            //uc4
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Retrieve average age in the list:");
+            double Average = PeopleList.Average(e => e.age);
+            Console.WriteLine("Average Age is: " + Average);
         }
     }
 }
