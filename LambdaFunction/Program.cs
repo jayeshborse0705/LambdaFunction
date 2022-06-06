@@ -17,6 +17,12 @@ namespace LambdaFunction
             PeopleList.Add(new Person(51, "prashant", "Panji(Goa)", 71));
             PeopleList.Add(new Person(40, "Rahul", "bhopal(MP)", 58));
             
+            //Uc2
+            foreach (Person p in PeopleList.FindAll(e => (e.age < 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name: " + p.name + " Age: " + p.age);
+            }
+
         }
     }
 }
