@@ -51,6 +51,16 @@ namespace LambdaFunction
             {
                 Console.WriteLine("Name: " + pers.name + " Age: " + pers.age);
             }
+            //uc7
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Remove specific name from the list");
+            string Name = Console.ReadLine();
+            int list = PeopleList.RemoveAll(x => x.name.Contains(Name));
+            Console.WriteLine("Remaning records are: ");
+            foreach (Person pe in PeopleList)
+            {
+                Console.WriteLine(pe.name);
+            }
         }
     }
 }
