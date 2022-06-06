@@ -35,6 +35,15 @@ namespace LambdaFunction
             Console.WriteLine("Retrieve average age in the list:");
             double Average = PeopleList.Average(e => e.age);
             Console.WriteLine("Average Age is: " + Average);
+
+            //uc5
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Check for specific name present in the list or not");
+            string NAME = Console.ReadLine();
+            if (PeopleList.Exists(e => e.name == NAME))
+            {
+                Console.WriteLine(NAME + " Exist in the list");
+            }
         }
     }
 }
