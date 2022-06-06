@@ -15,7 +15,7 @@ namespace LambdaFunction
             PeopleList.Add(new Person(40, "Yogesh", "Pune(MH)", 21));
             PeopleList.Add(new Person(60, "Rushikesh", "Valsad(GJ)", 61));
             PeopleList.Add(new Person(51, "prashant", "Panji(Goa)", 71));
-            PeopleList.Add(new Person(40, "Rahul", "bhopal(MP)", 58));
+            PeopleList.Add(new Person(80, "Rahul", "bhopal(MP)", 58));
             
             //Uc2
             foreach (Person p in PeopleList.FindAll(e => (e.age < 60)).Take(2).ToList())
@@ -43,6 +43,13 @@ namespace LambdaFunction
             if (PeopleList.Exists(e => e.name == NAME))
             {
                 Console.WriteLine(NAME + " Exist in the list");
+            }
+            //uc6
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Skip record from the list for age is less than 60");
+            foreach (Person pers in PeopleList.SkipWhile(e => e.age < 60))
+            {
+                Console.WriteLine("Name: " + pers.name + " Age: " + pers.age);
             }
         }
     }
