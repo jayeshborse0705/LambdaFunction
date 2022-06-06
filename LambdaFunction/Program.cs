@@ -23,6 +23,13 @@ namespace LambdaFunction
                 Console.WriteLine("Name: " + p.name + " Age: " + p.age);
             }
 
+            //uc3
+            Console.WriteLine("Retrive all record the list for age 13 to 18");
+            foreach (Person p in PeopleList.FindAll(e => (e.age >=13 && e.age <=18)).ToList())
+            {
+                Console.WriteLine("Name:"+p.name);
+            }
+
         }
     }
 }
